@@ -1,0 +1,27 @@
+{{!< default}}
+{{> header}}
+
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+<main class="content" role="main">
+
+    <article class="{{post_class}} article" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+
+        {{! Each post has the blog logo at the top, with a link back to the home page }}
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{#post}}
+            <section class="page-content">
+                 {{ content }}
+            </section>
+
+        {{/post}}
+
+    </article>
+
+</main>
+
+
+{{> footer}}

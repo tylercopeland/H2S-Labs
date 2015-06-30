@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Ghost 0.5.0">
+    <link rel="canonical" href="http://www.Hacktostart.com/">
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    
+    <!-- Google Authorship and Publisher Markup -->
+    <link rel="author" href="https://plus.google.com/111879606424595371187/posts"/>
+    <link rel="publisher" href="https://plus.google.com/111879606424595371187/"/>
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="{{meta_title}}">
+    <meta itemprop="description" content="{{meta_description}}">
+    <meta itemprop="image" content="http://hacktostart.com/assets/images/hacktostart_card.png">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@HackToStart">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{meta_description}}">
+    <meta name="twitter:creator" content="@HackToStart">
+    <meta name="twitter:image:src" content="http://hacktostart.com/assets/images/hacktostart_card.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{meta_title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.hacktostart.com/"/>
+    <meta property="og:image" content="http://hacktostart.com/assets/images/hacktostart_card.png" />
+    <meta property="og:description" content="{{meta_description}}" />
+    <meta property="og:site_name" content="Hack To Start" />
+    <meta property="article:published_time" content="{{date format="YYYY-MM-DD"}}" />
+    <meta property="article:modified_time" content="{{date format="YYYY-MM-DD"}}" />
+    <meta property="article:section" content="Article Section" />
+    <meta property="article:tag" content="Article Tag" />
+    <meta property="fb:admins" content="558224980949602" />
+
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-57-precomposed.png">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/js/styles/obsidian.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- (1) Moot depends on jQuery v1.7 or greater -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!--  Moot client application -->
+    <!-- <script src="https://cdn.moot.it/1/moot.min.js"></script>-->
+    <!-- (1) Moot look and feel -->
+    <!--<link rel="stylesheet" href="https://cdn.moot.it/1/moot.css">-->
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+
+    {{! Google Analytics}}
+    <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                     ga('create', 'UA-36554917-1', 'auto');
+                      ga('require', 'displayfeatures');
+                      ga('send', 'pageview');
+
+    </script>
+</head>
+<body class="{{body_class}}">
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file }}
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script src="/assets/js/highlight.pack.js"></script>
+    <!-- Ghost Search Script-->
+    <script src="/assets/js/jquery.ghostHunter.min.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      var searchField = $("#search-field").ghostHunter({
+                          results   : "#results",
+                          zeroResultsInfo     : false,
+                          //Enable the "search as you type" by uncommenting the following line
+                          onKeyUp   : true
+                        });
+
+      function clearResults() {
+        searchField.clear();
+      }
+
+    </script>
+</body>
+</html>
