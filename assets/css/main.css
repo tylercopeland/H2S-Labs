@@ -64,21 +64,18 @@ h1, h2, h3, h4, h5 {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box;
 }
 
 .button-primary { 
   color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0;
+  background-color: #00A6E3;
 }
 
 .button-primary:hover { 
   color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB;
+  background-color: #0297cd;
 }
 
 .sub {
@@ -277,10 +274,10 @@ body a, html a {
     cursor: pointer;
     text-align: center;
     margin: 0 auto;
-    padding: 10px 25px;
     font-size: 14px;
     border:none;
     width:100%;
+    height:auto;
 
 }
 
@@ -502,6 +499,7 @@ body a, html a {
   position: relative;
   background-color: #f2f2f2;
   padding: 20px 0;
+  text-align: center;
 }
 
 .tag-nav-inner {
@@ -548,13 +546,18 @@ body a, html a {
     width: 100%;
     overflow: hidden;
     position: relative;
-    padding: 0 1.25rem;
+    padding: 1rem 1rem 6rem 1rem;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-@media only screen and (min-width: 900px) {
+.index .post img { 
+  height:auto;
+  width:100%;
+}
+
+@media only screen and (min-width: 800px) {
     .index .post {
         width: 100%;
         float: left;
@@ -564,8 +567,12 @@ body a, html a {
     .page .post { 
         position: relative;
         width: 100%;
-        padding: 0 0.25rem 0.25rem 0;
+        padding: 0 0.25rem 6rem 0;
         clear:both;
+    }
+
+    .index .post img { 
+        height:300px;
     }
 
 }
@@ -584,9 +591,6 @@ body a, html a {
   width:100%;
 }
 
-.index .post img { 
-    height:300px;
-}
 
 .index .post p { 
   font-size: 1.33rem;
