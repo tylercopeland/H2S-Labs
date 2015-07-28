@@ -495,6 +495,42 @@ body a, html a {
     width: 40px;
 }
 
+
+.tag-nav { 
+  background:#f2f2f2;
+  display: block;
+  position: relative;
+  background-color: #f2f2f2;
+  padding: 20px 0;
+}
+
+.tag-nav-inner {
+  display: block;
+  padding: 0 20px;
+  width:100%;
+}
+
+.tag-nav a {
+  display: inline-block;
+  margin-right:20px;
+  text-decoration: none;
+  color:#9B9B9B;
+} 
+
+.tag-nav a:hover{ 
+  color:#4A4A4A;
+}
+
+
+@media only screen and (min-width: 800px) {
+  .tag-nav-inner { 
+    width:620px;
+    margin:0 auto;
+    padding:0;
+  }
+}
+ 
+
 .index:after {
     content: "";
     display: table;
@@ -522,7 +558,7 @@ body a, html a {
     .index .post {
         width: 100%;
         float: left;
-        padding: 0 0.25rem 0.25rem 0;
+        padding: 0 0.25rem 6rem 0;
     }
 
     .page .post { 
@@ -552,32 +588,15 @@ body a, html a {
     height:300px;
 }
 
-
-@media only screen and (min-width: 600px) {
-.index .post .post-content-left { 
-  float:left;
-    width:50%;
-  }
-
-  .index .post .post-content-right { 
-    float:right;
-    width:50%;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-
-}
-
-@media only screen and (min-width: 2000px) {
-
-}
-
 .index .post p { 
   font-size: 1.33rem;
   line-height: 1.35;
   padding: 0 0 1.7689rem;
   margin: 0;
+}
+
+.index .post a { 
+  text-decoration: none;
 }
 
 .index .post .post__image {
@@ -595,6 +614,13 @@ body a, html a {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
+
+.index .post .date { 
+  border-right:1px solid #f2f2f2;
+  padding-right:5px;
+  margin-right:5px;
+} 
 
 @media only screen and (min-width: 600px) {
     .index .post .post__image {

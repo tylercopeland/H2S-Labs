@@ -3,33 +3,52 @@
 
 {{! The main content area on the homepage }}
 
-<main class="content index" role="main">
-    <h1>Our Hacking Lab</h1>
-    <p class="sub">Things we are currently working on</p>
-    {{! Each post will be output using this markup }}
-    {{#foreach posts}}
+    {{! tags }}
 
-    <article class="post {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+    <div class="tag-nav">
+        <div class="tag-nav-inner">
 
-        <a href="{{url}}" itemprop="url"> <img src="{{image}}" /> </a> 
-        <h2 class="post-title" itemprop="name">
-            <a href="{{url}}" itemprop="url"> {{{title}}}</a>
-        </h2>
-        <span class="date">
-            <i class="fa fa-calendar-o"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
-        </span>
-        <span> {{tags autolink="false"}}</span>
-        <br><br>
-        <p>{{excerpt}}</p>
+        {{#foreach posts}}
 
-        <a href="{{url}}" itemprop="url" class="button button-primary"> Read More</a>
-    </article>
+            {{#foreach tags}}
 
-    {{/foreach}}    
+                <a href="{{url}}">{{name}}</a>{{#if @last}} {{else}}, {{/if}}
+            {{/foreach}}
 
-    {{pagination}}
+            {{/foreach}}    
+        </div>
+    </div>
 
-</main>
+
+    <main class="content index" role="main">
+        <h1>Our Hacking Lab</h1>
+        <p class="sub">Things we are currently working on</p>
+
+        {{#foreach posts}}
+
+        {{! articles }}
+
+        <article class="post {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+
+            <a href="{{url}}" itemprop="url"> <img src="{{image}}" /> </a> 
+            <h2 class="post-title" itemprop="name">
+                <a href="{{url}}" itemprop="url"> {{{title}}}</a>
+            </h2>
+            <span class="date">
+                <i class="fa fa-calendar-o"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+            </span>
+            <span> {{tags}}</span>
+            <br><br>
+            <p>{{excerpt}}</p>
+
+            <a href="{{url}}" itemprop="url" class="button button-primary"> Read More</a>
+        </article>
+
+        {{/foreach}}    
+
+        {{pagination}}
+
+    </main>
 
 {{> footer}}
 
