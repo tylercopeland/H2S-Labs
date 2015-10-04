@@ -4,22 +4,9 @@
 {{! The main content area on the homepage }}
 
     {{! tags }}
-
-    <div class="tag-nav">
-        <div class="tag-nav-inner">
-
-        {{#foreach posts}}
-
-            {{#foreach tags}}
-
-                <a href="{{url}}">{{name}}</a>{{#if @last}} {{else}}, {{/if}}
-            {{/foreach}}
-
-            {{/foreach}}    
-        </div>
-    </div>
-
-
+   
+    {{navigation}}
+ 
     <main class="content index" role="main">
         <h1>Our Hacking Lab</h1>
         <p class="sub">Things we are currently working on</p>

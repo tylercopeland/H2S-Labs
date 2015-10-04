@@ -1,4 +1,4 @@
-@font-face {
+  @font-face {
   font-family: 'Neuton';
   font-style: normal;
   font-weight: 200;
@@ -505,12 +505,15 @@ body a, html a {
 .tag-nav-inner {
   display: block;
   padding: 0 20px;
-  width:100%;
+}
+
+.tag-nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right:20px;
 }
 
 .tag-nav a {
-  display: inline-block;
-  margin-right:20px;
   text-decoration: none;
   color:#9B9B9B;
 } 
@@ -1264,17 +1267,18 @@ body a, html a {
     margin-top: 0;
 }
 
-.article .post-footer .author {
+.author {
     font-size: 1rem;
     position: relative;
     width: auto;
-    margin: 0 auto 1rem;
+    margin: 4rem auto 1rem auto;
+    padding: 0 0 2.61792rem 6.85353rem;
 }
 
-.article .post-footer .author .author-image {
+.author .author-image {
     width: 6.85353rem;
     height: 6.85353rem;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     background-size: cover;
@@ -1282,35 +1286,37 @@ body a, html a {
     text-indent: -9999px;
 }
 
-.article .post-footer .author h4 {
+.author h4 {
     font-size: 1.33rem;
     margin: 0;
     color: #4A4A4A;
+    padding: 0 0 0 2.61792rem;
 }
 
-.article .post-footer .author p {
+.author p {
     font-size: 1.33rem;
     margin: 0.5rem 0;
     color: #999999;
+    padding: 0 0 0 2.61792rem;
 }
 
 
 
 @media only screen and (min-width: 600px) {
 
-    article .post-footer .author {
+    .author {
         padding: 0 0 2.61792rem 6.85353rem;
     }
 
-    .article .post-footer .author .author-image {
+    .author .author-image {
         position: absolute;
     }
 
-    .article .post-footer .author h4 {
+    .author h4 {
         padding: 0 0 0 2.61792rem;
     }
 
-    .article .post-footer .author p {
+    .author p {
         padding: 0 0 0 2.61792rem;
     }
 

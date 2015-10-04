@@ -46,13 +46,16 @@
 
             </div>
 
-
-
             <section class="post-content">
                 {{content}}
             </section>
+        
+            <section class="author">
+                <img class="author-image" src="{{author.image}}" />
+                <h4 itemprop="author" itemscope="" itemtype="http://schema.org/Person" > {{author}} </h4>
+                <p itemprop="description" > {{author.bio}} </p>
+            </section>
 
-            
             <footer class="post-footer">
                 <section class="share">
                     <div class="left">
